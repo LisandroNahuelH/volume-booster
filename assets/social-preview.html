@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; }
+  body {
+    background: radial-gradient(1100px 620px at 88% 6%, #17222c 0%, #0b0d10 58%, #07080a 100%);
+    color: #e8edf2;
+    display: flex;
+  }
+  .left { width: 600px; padding: 0 24px 0 72px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo svg { display: block; }
+  .brand { font-size: 19px; color: #8f9aa5; letter-spacing: .4px; }
+  h1 { font-size: 58px; letter-spacing: -1.5px; line-height: 1.02; }
+  .tag { font-size: 22px; line-height: 1.35; color: #aeb9c4; max-width: 480px; }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .chip { font-size: 15px; padding: 7px 14px; border: 1px solid #2b3641; border-radius: 999px; color: #cfd8e0; background: #10151a; }
+  .foot { font-size: 15px; color: #7f8b96; margin-top: 6px; }
+  .right { flex: 1; display: flex; align-items: center; justify-content: center; padding: 52px 60px 52px 0; }
+  .shot { width: 545px; border-radius: 16px; border: 1px solid #26313c; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="#11AD32"/>
+        <g transform="translate(4 4)" stroke="#05070B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+          <path d="M20 2v4"/>
+          <path d="M22 4h-4"/>
+          <circle cx="4" cy="20" r="2"/>
+        </g>
+      </svg>
+      <span class="brand">Premium11</span>
+    </div>
+    <h1>Volume Booster</h1>
+    <div class="tag">Make any tab louder — the audio is processed locally, never uploaded.</div>
+    <div class="chips">
+      <span class="chip">Chrome · MV3</span>
+      <span class="chip">Faust WASM DSP</span>
+      <span class="chip">All-Sites auto-boost</span>
+      <span class="chip">Local by design</span>
+    </div>
+    <div class="foot">MIT · build from source on Node 24 · github.com/LisandroNahuelH/volume-booster</div>
+  </div>
+  <div class="right">
+    <img class="shot" src="file:///C:/Users/Lisandro/AppData/Local/Temp/vb-public/docs/assets/screenshot-1280x800.png" alt="">
+  </div>
+</body>
+</html>
