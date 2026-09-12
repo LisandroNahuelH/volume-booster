@@ -1,0 +1,40 @@
+:root[dir="rtl"] {
+  direction: rtl;
+}
+
+:root[dir="rtl"] .quality-protector__copy,
+:root[dir="rtl"] .session-boost-bar__label {
+  text-align: right;
+}
+
+:root[dir="rtl"] .session-boost-bar__button {
+  direction: rtl;
+}
+
+:root[dir="rtl"] .ghost-button--lane__play-indicator {
+  left: 10px;
+  right: auto;
+}
+
+:root[dir="rtl"] .ghost-button--lane__play-icon {
+  margin-left: 0;
+  margin-right: 2px;
+  border-left: 0;
+  border-right: 8px solid rgba(79, 40, 6, 0.86);
+}
+
+:root[dir="rtl"] .popup-toolbar__button[data-popup-toolbar="open-popup-premium"]::after {
+  left: auto;
+  right: -140%;
+  transform: skewX(24deg) translateX(0);
+}
+
+:root[dir="rtl"] .session-carousel__nav--previous {
+  left: auto;
+  right: -6px;
+}
+
+:root[dir="rtl"] .session-carousel__nav--next {
+  right: auto;
+  left: -6px;
+}

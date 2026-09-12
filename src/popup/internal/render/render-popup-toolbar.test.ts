@@ -1,0 +1,34 @@
+import { expect, test } from "vitest";
+import { loadLocaleCatalog, translate } from "../../../shared/runtime-i18n";
+import { makePopupRenderContext } from "../../test-support/make-popup-render-context";
+import { renderPopupToolbar } from "./render-popup-toolbar";
+
+test("renders toolbar state for the current view and popup theme", async () => {
+  const catalog = await loadLocaleCatalog("en");
+  const markup = renderPopupToolbar(
+    makePopupRenderContext(catalog, {
+      popupTheme: "light",
+      currentView: "settings"
+    })
+  );
+
+  expect(markup).toContain('data-action="open-popup-premium"');
+  expect(markup).toContain('data-popup-toolbar="open-popup-premium"');
+  expect(markup).toContain('<span class="popup-toolbar__text">Get Premium</span>');
+  expect(markup).toContain('data-action="toggle-popup-theme"');
+  expect(markup).toContain(translate(catalog, "popupToolbarThemeDarkLabel"));
+  expect(markup).toContain('data-action="open-popup-settings"');
+  expect(markup).toContain('aria-pressed="true"');
+  expect(markup.match(/popup-toolbar__text/g)).toHaveLength(1);
+});
+
+test("renders the activated premium copy when lifetime premium is active", async () => {
+  const catalog = await loadLocaleCatalog("en");
+  const markup = renderPopupToolbar(
+    makePopupRenderContext(catalog, {
+      isLifetimePremiumActive: true
+    })
+  );
+
+  expect(markup).toContain('<span class="popup-toolbar__text">Premium Activated</span>');
+});

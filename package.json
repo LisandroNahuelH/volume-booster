@@ -1,0 +1,69 @@
+{
+  "name": "volume-booster-by-premium11",
+  "version": "0.1.15",
+  "description": "A modular Chrome MV3 volume booster extension built with TypeScript.",
+  "scripts": {
+    "popup:structure:check": "node scripts/check-popup-structure.mjs",
+    "faust:refresh": "node scripts/build-faust-assets.mjs",
+    "i18n:generate": "node scripts/generate-i18n-types.mjs",
+    "i18n:check": "node scripts/check-i18n.mjs && node scripts/i18n/audit-title-case.mjs",
+    "i18n:audit": "node scripts/audit-i18n-literals.mjs",
+    "build": "npm run i18n:generate && npm run i18n:check && npm run i18n:audit && npm run faust:refresh && node ./node_modules/vite/bin/vite.js build && node scripts/build-registered-content-scripts.mjs",
+    "build:registered-content-scripts": "node scripts/build-registered-content-scripts.mjs",
+    "dev": "npm run i18n:generate && node scripts/watch.mjs",
+    "watch": "npm run i18n:generate && node scripts/watch.mjs",
+    "watch:vite": "node ./node_modules/vite/bin/vite.js build --watch",
+    "watch:registered-content-scripts": "node scripts/build-registered-content-scripts.mjs --watch",
+    "e2e:auto:fixtures": "npm run build && node scripts/e2e/auto-booster.mjs --targets=fixtures",
+    "e2e:auto:sites": "npm run build && node scripts/e2e/auto-booster.mjs --targets=public-sites",
+    "e2e:auto": "npm run build && node scripts/e2e/auto-booster.mjs --targets=all",
+    "test": "npm run i18n:generate && node ./node_modules/vitest/vitest.mjs run",
+    "test:coverage": "npm run i18n:generate && node ./node_modules/vitest/vitest.mjs run --coverage",
+    "test:watch": "node ./node_modules/vitest/vitest.mjs",
+    "test:mutate": "npm run i18n:generate && node ./node_modules/@stryker-mutator/core/bin/stryker.js run",
+    "test:mutate:changed": "npm run i18n:generate && node scripts/stryker-changed.mjs",
+    "test:mutate:file": "npm run i18n:generate && node scripts/stryker-file.mjs",
+    "typecheck": "npm run i18n:generate && node ./node_modules/typescript/bin/tsc --noEmit",
+    "package:release": "npm run build && node scripts/create-release-zip.mjs",
+    "verify": "npm run popup:structure:check && npm run i18n:check && npm run i18n:audit && npm test && npm run typecheck && npm run build"
+  },
+  "keywords": [
+    "chrome-extension",
+    "mv3",
+    "typescript",
+    "audio",
+    "volume-booster"
+  ],
+  "author": "Lisandro Nahuel H",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LisandroNahuelH/volume-booster.git"
+  },
+  "homepage": "https://chromewebstore.google.com/detail/kahflpfpncmoabkjpoppgbiihjgpiejc",
+  "bugs": {
+    "url": "https://github.com/LisandroNahuelH/volume-booster/issues"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@sentry/vite-plugin": "^5.1.1",
+    "@stryker-mutator/core": "^9.6.0",
+    "@stryker-mutator/typescript-checker": "^9.6.0",
+    "@stryker-mutator/vitest-runner": "^9.6.0",
+    "@types/chrome": "^0.1.37",
+    "@types/node": "^25.3.5",
+    "@vitest/coverage-v8": "^4.0.18",
+    "happy-dom": "^20.8.3",
+    "playwright": "^1.56.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@grame/faustwasm": "^0.15.7",
+    "@sentry/browser": "^10.42.0"
+  }
+}

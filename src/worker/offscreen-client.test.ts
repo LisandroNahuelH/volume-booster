@@ -1,0 +1,14 @@
+import "./offscreen-client/tests/ensure-offscreen-document.suite";
+import "./offscreen-client/tests/start-gain-settings.suite";
+import "./offscreen-client/tests/snapshot-when-document-missing.suite";
+import "./offscreen-client/tests/has-document.suite";
+import "./offscreen-client/tests/get-snapshot-response.suite";
+import "./offscreen-client/tests/retry-missing-receiver.suite";
+import "./offscreen-client/tests/close-if-idle.suite";
+import "./offscreen-client/tests/localized-errors-from-payload.suite";
+import "./offscreen-client/tests/default-localized-errors.suite";
+import "./offscreen-client/tests/metadata-and-stop-success.suite";
+import "./offscreen-client/tests/empty-list-when-document-missing-for-settings-and-stop.suite";
+import "./offscreen-client/tests/original-error-bubbles.suite";
+import "./offscreen-client/tests/send-offscreen-message-retry-exhausted.suite";
+import "./offscreen-client/tests/send-offscreen-message-undeliverable.suite";
