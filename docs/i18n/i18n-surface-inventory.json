@@ -1,0 +1,8 @@
+[
+  { "surface": "popup", "type": "runtime-ui", "status": "audited" },
+  { "surface": "offscreen", "type": "runtime-ui", "status": "audited" },
+  { "surface": "automation page", "type": "runtime-ui", "status": "audited" },
+  { "surface": "manifest", "type": "declarative-ui", "status": "localized" },
+  { "surface": "content fallback toast", "type": "runtime-ui", "status": "localized-with-root-locale-metadata" },
+  { "surface": "background-originated user-facing errors", "type": "runtime-ui", "status": "audited" }
+]
