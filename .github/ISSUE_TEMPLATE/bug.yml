@@ -1,0 +1,51 @@
+name: Bug report
+description: Something broke in the extension or in the build.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Never include tokens, personal data or copyrighted content.
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: chrome://extensions shows it (e.g. 0.1.15)
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: How are you running it?
+      options:
+        - Chrome Web Store build
+        - Built from source (Load unpacked)
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 116+ / Edge / Brave ...
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, expected vs actual, and the site involved (if any).
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output (optional)
+      description: Service worker / popup console errors, if any.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I am not reporting a DRM-protected player as a bug (see docs/limits.md)
+          required: true

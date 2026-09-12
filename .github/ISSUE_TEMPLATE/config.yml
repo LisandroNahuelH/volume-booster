@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Chrome Web Store listing
+    url: https://chromewebstore.google.com/detail/kahflpfpncmoabkjpoppgbiihjgpiejc
+    about: Install the published extension
+  - name: Privacy policy
+    url: https://www.premium11.com/privacidad
+    about: How the anonymous heartbeat handles data
+  - name: Security reports
+    url: https://github.com/LisandroNahuelH/volume-booster/security/advisories/new
+    about: Report a vulnerability privately

@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  NODE_OPTIONS: "--max_old_space_size=4096"
+
+jobs:
+  verify:
+    name: Verify — Node 24 / ubuntu-latest
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run verification pipeline
+        run: npm run verify
+
+      - name: Verify build output
+        run: |
+          test -f dist/manifest.json
+          test -f dist/background.js
+          test -f dist/popup.html
+          test -f dist/offscreen.html
+          test -f dist/content-scripts/auto-booster-main.js
+          test -f dist/content-scripts/auto-booster-isolated.js
+          node -e "const pkg=require('./package.json');const m=require('./dist/manifest.json');if(m.manifest_version!==3){console.error('dist/manifest.json is not MV3');process.exit(1)};if(m.version!==pkg.version){console.error('version mismatch: package.json='+pkg.version+' dist/manifest.json='+m.version);process.exit(1)};console.log('Build output OK: MV3 v'+m.version)"

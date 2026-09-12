@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest an improvement.
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What do you have in mind?
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Notes
+      options:
+        - label: This is about the extension itself (not the store listing or the Premium11 site)
