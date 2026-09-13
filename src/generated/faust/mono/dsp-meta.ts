@@ -4,7 +4,7 @@
 const metadata = {
   "name": "prism-premium-mono",
   "filename": "prism-premium-mono",
-  "version": "2.84.3",
+  "version": "2.88.0",
   "compile_options": "-lang wasm-i -fpga-mem-th 4 -ct 1 -es 1 -mcd 16 -mdd 1024 -mdy 33 -single -ftz 2",
   "library_list": [
     "/usr/share/faust/stdfaust.lib",
@@ -20,12 +20,12 @@ const metadata = {
   "include_pathnames": [
     "/faust/user/inc0",
     "/share/faust",
+    "/share/faust",
     "/usr/local/share/faust",
     "/usr/share/faust",
     "."
   ],
-  "size": 1581588,
-  "code": "mGuEAVQ8Hw==",
+  "size": 1581656,
   "inputs": 1,
   "outputs": 1,
   "meta": [
@@ -33,7 +33,7 @@ const metadata = {
       "analyzers.lib/name": "Faust Analyzer Library"
     },
     {
-      "analyzers.lib/version": "1.3.0"
+      "analyzers.lib/version": "1.4.0"
     },
     {
       "basics.lib/bypass1:author": "Julius Smith"
@@ -48,10 +48,10 @@ const metadata = {
       "basics.lib/peakholder:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
     },
     {
-      "basics.lib/peakholder:license": "MIT-style STK-4.3 license"
+      "basics.lib/peakholder:license": "LicenseRef-STK-4.3"
     },
     {
-      "basics.lib/version": "1.22.0"
+      "basics.lib/version": "1.23.0"
     },
     {
       "compile_options": "-lang wasm-i -fpga-mem-th 4 -ct 1 -es 1 -mcd 16 -mdd 1024 -mdy 33 -single -ftz 2"
@@ -60,25 +60,25 @@ const metadata = {
       "compressors.lib/FFcompressor_N_chan:author": "Bart Brouns"
     },
     {
-      "compressors.lib/FFcompressor_N_chan:license": "GPLv3"
+      "compressors.lib/FFcompressor_N_chan:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:author": "Bart Brouns"
     },
     {
-      "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:license": "GPLv3"
+      "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/RMS_compression_gain_N_chan_db:author": "Bart Brouns"
     },
     {
-      "compressors.lib/RMS_compression_gain_N_chan_db:license": "GPLv3"
+      "compressors.lib/RMS_compression_gain_N_chan_db:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/RMS_compression_gain_mono_db:author": "Bart Brouns"
     },
     {
-      "compressors.lib/RMS_compression_gain_mono_db:license": "GPLv3"
+      "compressors.lib/RMS_compression_gain_mono_db:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/limiter_lad_N:author": "Dario Sanfilippo"
@@ -87,7 +87,7 @@ const metadata = {
       "compressors.lib/limiter_lad_N:copyright": "Copyright (C) 2020 Dario Sanfilippo       <sanfilippo.dario@gmail.com>"
     },
     {
-      "compressors.lib/limiter_lad_N:license": "GPLv3 license"
+      "compressors.lib/limiter_lad_N:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/limiter_lad_mono:author": "Dario Sanfilippo"
@@ -96,7 +96,7 @@ const metadata = {
       "compressors.lib/limiter_lad_mono:copyright": "Copyright (C) 2020 Dario Sanfilippo       <sanfilippo.dario@gmail.com>"
     },
     {
-      "compressors.lib/limiter_lad_mono:license": "GPLv3 license"
+      "compressors.lib/limiter_lad_mono:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/name": "Faust Compressor Effect Library"
@@ -105,13 +105,13 @@ const metadata = {
       "compressors.lib/peak_compression_gain_N_chan_db:author": "Bart Brouns"
     },
     {
-      "compressors.lib/peak_compression_gain_N_chan_db:license": "GPLv3"
+      "compressors.lib/peak_compression_gain_N_chan_db:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/peak_compression_gain_mono_db:author": "Bart Brouns"
     },
     {
-      "compressors.lib/peak_compression_gain_mono_db:license": "GPLv3"
+      "compressors.lib/peak_compression_gain_mono_db:license": "GPL-3.0-only"
     },
     {
       "compressors.lib/version": "1.6.0"
@@ -126,7 +126,7 @@ const metadata = {
       "filters.lib/crossover2LR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
     },
     {
-      "filters.lib/crossover2LR4:license": "MIT-style STK-4.3 license"
+      "filters.lib/crossover2LR4:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/crossover3LR4:author": "Dario Sanfilippo"
@@ -135,7 +135,7 @@ const metadata = {
       "filters.lib/crossover3LR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
     },
     {
-      "filters.lib/crossover3LR4:license": "MIT-style STK-4.3 license"
+      "filters.lib/crossover3LR4:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/fir:author": "Julius O. Smith III"
@@ -144,7 +144,7 @@ const metadata = {
       "filters.lib/fir:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
-      "filters.lib/fir:license": "MIT-style STK-4.3 license"
+      "filters.lib/fir:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/highpass:author": "Julius O. Smith III"
@@ -153,13 +153,16 @@ const metadata = {
       "filters.lib/highpass:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
+      "filters.lib/highpass:license": "LicenseRef-STK-4.3"
+    },
+    {
       "filters.lib/highpassLR4:author": "Dario Sanfilippo"
     },
     {
       "filters.lib/highpassLR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
     },
     {
-      "filters.lib/highpassLR4:license": "MIT-style STK-4.3 license"
+      "filters.lib/highpassLR4:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/iir:author": "Julius O. Smith III"
@@ -168,7 +171,7 @@ const metadata = {
       "filters.lib/iir:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
-      "filters.lib/iir:license": "MIT-style STK-4.3 license"
+      "filters.lib/iir:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/integrator:author": "Julius O. Smith III"
@@ -177,13 +180,16 @@ const metadata = {
       "filters.lib/integrator:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
-      "filters.lib/integrator:license": "MIT-style STK-4.3 license"
-    },
-    {
-      "filters.lib/lowpass0_highpass1": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
+      "filters.lib/integrator:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/lowpass0_highpass1:author": "Julius O. Smith III"
+    },
+    {
+      "filters.lib/lowpass0_highpass1:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
+    },
+    {
+      "filters.lib/lowpass0_highpass1:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/lowpassLR4:author": "Dario Sanfilippo"
@@ -192,7 +198,7 @@ const metadata = {
       "filters.lib/lowpassLR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
     },
     {
-      "filters.lib/lowpassLR4:license": "MIT-style STK-4.3 license"
+      "filters.lib/lowpassLR4:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/name": "Faust Filters Library"
@@ -204,7 +210,7 @@ const metadata = {
       "filters.lib/svf:copyright": "Copyright (C) 2020 Oleg Nesterov <oleg@redhat.com>"
     },
     {
-      "filters.lib/svf:license": "MIT-style STK-4.3 license"
+      "filters.lib/svf:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/tf2:author": "Julius O. Smith III"
@@ -213,7 +219,7 @@ const metadata = {
       "filters.lib/tf2:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
-      "filters.lib/tf2:license": "MIT-style STK-4.3 license"
+      "filters.lib/tf2:license": "LicenseRef-STK-4.3"
     },
     {
       "filters.lib/tf2s:author": "Julius O. Smith III"
@@ -222,10 +228,10 @@ const metadata = {
       "filters.lib/tf2s:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
     },
     {
-      "filters.lib/tf2s:license": "MIT-style STK-4.3 license"
+      "filters.lib/tf2s:license": "LicenseRef-STK-4.3"
     },
     {
-      "filters.lib/version": "1.7.1"
+      "filters.lib/version": "1.9.0"
     },
     {
       "maths.lib/author": "GRAME"
@@ -234,7 +240,7 @@ const metadata = {
       "maths.lib/copyright": "GRAME"
     },
     {
-      "maths.lib/license": "LGPL with exception"
+      "maths.lib/license": "LicenseRef-LGPL-2.1-or-later-with-Faust-exception"
     },
     {
       "maths.lib/name": "Faust Math Library"
@@ -255,19 +261,19 @@ const metadata = {
       "routes.lib/name": "Faust Signal Routing Library"
     },
     {
-      "routes.lib/version": "1.2.0"
+      "routes.lib/version": "1.4.0"
     },
     {
-      "signals.lib/name": "Faust Signal Routing Library"
+      "signals.lib/name": "Faust Routing Library"
     },
     {
       "signals.lib/onePoleSwitching:author": "Jonatan Liljedahl, revised by Dario Sanfilippo"
     },
     {
-      "signals.lib/onePoleSwitching:licence": "STK-4.3"
+      "signals.lib/onePoleSwitching:licence": "LicenseRef-STK-4.3"
     },
     {
-      "signals.lib/version": "1.6.0"
+      "signals.lib/version": "1.7.0"
     }
   ],
   "ui": [
@@ -281,7 +287,7 @@ const metadata = {
           "varname": "fHslider14",
           "shortname": "controls_clarity_presence_tilt_db",
           "address": "/prism-premium-mono/controls_clarity_presence_tilt_db",
-          "index": 524660,
+          "index": 524696,
           "meta": [
             {
               "0": ""
@@ -321,7 +327,7 @@ const metadata = {
           "varname": "fHslider16",
           "shortname": "controls_lookahead_ms",
           "address": "/prism-premium-mono/controls_lookahead_ms",
-          "index": 1581548,
+          "index": 1581616,
           "meta": [
             {
               "0": ""
@@ -341,7 +347,7 @@ const metadata = {
           "varname": "fHslider8",
           "shortname": "controls_low_band_makeup_db",
           "address": "/prism-premium-mono/controls_low_band_makeup_db",
-          "index": 264,
+          "index": 284,
           "meta": [
             {
               "0": ""
@@ -358,10 +364,10 @@ const metadata = {
         {
           "type": "hslider",
           "label": "controls/low_band_ratio_bias",
-          "varname": "fHslider9",
+          "varname": "fHslider11",
           "shortname": "controls_low_band_ratio_bias",
           "address": "/prism-premium-mono/controls_low_band_ratio_bias",
-          "index": 268,
+          "index": 524612,
           "meta": [
             {
               "0": ""
@@ -378,7 +384,7 @@ const metadata = {
           "varname": "fHslider12",
           "shortname": "controls_low_band_threshold_offset_db",
           "address": "/prism-premium-mono/controls_low_band_threshold_offset_db",
-          "index": 524588,
+          "index": 524616,
           "meta": [
             {
               "0": ""
@@ -398,7 +404,7 @@ const metadata = {
           "varname": "fHslider7",
           "shortname": "controls_low_band_trim_db",
           "address": "/prism-premium-mono/controls_low_band_trim_db",
-          "index": 260,
+          "index": 280,
           "meta": [
             {
               "0": ""
@@ -418,7 +424,7 @@ const metadata = {
           "varname": "fHslider15",
           "shortname": "controls_mid_high_threshold_offset_db",
           "address": "/prism-premium-mono/controls_mid_high_threshold_offset_db",
-          "index": 1049008,
+          "index": 1049004,
           "meta": [
             {
               "0": ""
@@ -438,7 +444,7 @@ const metadata = {
           "varname": "fHslider10",
           "shortname": "controls_multiband_depth",
           "address": "/prism-premium-mono/controls_multiband_depth",
-          "index": 272,
+          "index": 524588,
           "meta": [
             {
               "0": ""
@@ -492,7 +498,7 @@ const metadata = {
           "varname": "fHslider13",
           "shortname": "controls_output_ceiling_db",
           "address": "/prism-premium-mono/controls_output_ceiling_db",
-          "index": 524648,
+          "index": 524684,
           "meta": [
             {
               "0": ""
@@ -529,7 +535,7 @@ const metadata = {
           "varname": "fHslider17",
           "shortname": "controls_output_soft_clip_mix",
           "address": "/prism-premium-mono/controls_output_soft_clip_mix",
-          "index": 1581552,
+          "index": 1581620,
           "meta": [
             {
               "0": ""
@@ -560,10 +566,10 @@ const metadata = {
         {
           "type": "hslider",
           "label": "controls/release_ms",
-          "varname": "fHslider11",
+          "varname": "fHslider9",
           "shortname": "controls_release_ms",
           "address": "/prism-premium-mono/controls_release_ms",
-          "index": 280,
+          "index": 524584,
           "meta": [
             {
               "0": ""
@@ -583,7 +589,7 @@ const metadata = {
           "varname": "fHslider6",
           "shortname": "controls_tone_low_band_gain_db",
           "address": "/prism-premium-mono/controls_tone_low_band_gain_db",
-          "index": 208,
+          "index": 212,
           "meta": [
             {
               "0": ""
