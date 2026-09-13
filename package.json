@@ -63,7 +63,7 @@
     "vitest": "^4.1.11"
   },
   "dependencies": {
-    "@grame/faustwasm": "^0.15.7",
+    "@grame/faustwasm": "^0.18.3",
     "@sentry/browser": "^10.74.0"
   }
 }
