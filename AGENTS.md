@@ -74,6 +74,24 @@ Never “fix” verification by deleting tests, weakening the typecheck, or comm
 - i18n: keys only in `en`, exact parity, no inline visible copy.
 - One function per file, at most 150 LOC.
 
+## Dependency policy (dependabot)
+
+`.github/dependabot.yml` groups peer-locked families into one PR: `@stryker-mutator/*`, `@sentry/*`, and `vite` + `vitest` + `@vitest/*` (they must move together), plus every `github-actions` bump. Split PRs for these families cannot install or typecheck.
+
+Three majors are on hold through an `ignore` rule, each with the evidence in the config file.
+
+| Held | Reason |
+|---|---|
+| `vitest` major + `@vitest/coverage-v8` major | `@stryker-mutator/vitest-runner` 10.0.0 cannot activate mutants on vitest 5: the mutation smoke run drops to 11.36 % (3 killed / 39 survived) against 97.73 % on vitest 4. The `test:mutate` gate would report a false pass. |
+| `vite` major | vite 8 needs the `vitest >= 4.1.11` type surface. Older vitest 4.0.x pins vite `^7`, so `vite.config.ts` fails with `TS2769`. |
+| `typescript` major | TypeScript 7 is the native compiler. `import ts from "typescript"` no longer exposes `ScriptTarget` or `createSourceFile`, which `scripts/check-popup-structure.mjs:63` and `scripts/i18n-audit-lib.mjs:98` use. |
+
+Do not delete a rule without replacing the evidence it cites.
+
+## Known gaps
+
+- `npm run test:coverage` fails on `main`: statements 88.54 % vs 95, branches 81.24 % vs 85, functions 88.55 % vs 90, lines 89.08 % vs 95. `ci.yml` does not run coverage, so the failure is local-only and invisible. Close it with real tests, or re-derive the thresholds from measured coverage — never by weakening a gate to make a run green.
+
 ## Manual path (same steps for a human)
 
 `git clone` → `npm ci` → `npm run build` → Load unpacked from `dist/`. Full walkthrough: [README.md](README.md) → Quick start.
