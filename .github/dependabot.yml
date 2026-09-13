@@ -6,12 +6,39 @@ updates:
       interval: weekly
     open-pull-requests-limit: 5
     groups:
+      # Peer-locked families: these must move in one PR or the install/typecheck fails.
       stryker:
         patterns:
           - "@stryker-mutator/*"
       sentry:
         patterns:
           - "@sentry/*"
+      test-stack:
+        patterns:
+          - "vite"
+          - "vitest"
+          - "@vitest/*"
+    ignore:
+      # Held: @stryker-mutator/vitest-runner 10.0.0 cannot activate mutants on vitest 5.
+      # Mutation smoke drops to 11.36% (3 killed / 39 survived) vs 97.73% on vitest 4, so the
+      # test:mutate gate would pass falsely. Revisit when the runner declares vitest 5 support.
+      - dependency-name: "vitest"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@vitest/coverage-v8"
+        update-types:
+          - "version-update:semver-major"
+      # Held: vite 8 needs the vitest >= 4.1.11 type surface; older vitest 4.0.x pins vite ^7
+      # and vite.config.ts fails with TS2769. Unblock together with vitest.
+      - dependency-name: "vite"
+        update-types:
+          - "version-update:semver-major"
+      # Held: TypeScript 7 is the native compiler and no longer exposes the classic AST API.
+      # scripts/check-popup-structure.mjs and scripts/i18n-audit-lib.mjs must be rewritten
+      # against typescript/unstable/* before this bump can land. See AGENTS.md.
+      - dependency-name: "typescript"
+        update-types:
+          - "version-update:semver-major"
   - package-ecosystem: github-actions
     directory: /
     schedule:
