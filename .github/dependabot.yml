@@ -5,7 +5,18 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 5
+    groups:
+      stryker:
+        patterns:
+          - "@stryker-mutator/*"
+      sentry:
+        patterns:
+          - "@sentry/*"
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
+    groups:
+      github-actions:
+        patterns:
+          - "*"
