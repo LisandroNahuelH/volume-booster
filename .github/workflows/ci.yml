@@ -49,3 +49,14 @@ jobs:
           test -f dist/content-scripts/auto-booster-main.js
           test -f dist/content-scripts/auto-booster-isolated.js
           node -e "const pkg=require('./package.json');const m=require('./dist/manifest.json');if(m.manifest_version!==3){console.error('dist/manifest.json is not MV3');process.exit(1)};if(m.version!==pkg.version){console.error('version mismatch: package.json='+pkg.version+' dist/manifest.json='+m.version);process.exit(1)};console.log('Build output OK: MV3 v'+m.version)"
+
+      - name: Verify the build changed no tracked file
+        run: |
+          changed="$(git status --porcelain --untracked-files=no)"
+          if [ -n "$changed" ]; then
+            echo "The build modified tracked files:"
+            echo "$changed"
+            echo "Commit the regenerated artifacts (Faust assets under public/faust and src/generated/faust, generated i18n) before merging." >&2
+            exit 1
+          fi
+          echo "Generated artifacts are up to date."

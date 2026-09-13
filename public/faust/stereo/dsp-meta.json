@@ -1,7 +1,7 @@
 {
     "name": "prism-premium-stereo",
     "filename": "prism-premium-stereo",
-    "version": "2.84.3",
+    "version": "2.88.0",
     "compile_options": "-lang wasm-i -fpga-mem-th 4 -ct 1 -es 1 -mcd 16 -mdd 1024 -mdy 33 -single -ftz 2",
     "library_list": [
         "/usr/share/faust/stdfaust.lib",
@@ -17,12 +17,12 @@
     "include_pathnames": [
         "/faust/user/inc0",
         "/share/faust",
+        "/share/faust",
         "/usr/local/share/faust",
         "/usr/share/faust",
         "."
     ],
-    "size": 3162964,
-    "code": "cJ29AVQ8Hw==",
+    "size": 3163080,
     "inputs": 2,
     "outputs": 2,
     "meta": [
@@ -30,7 +30,7 @@
             "analyzers.lib/name": "Faust Analyzer Library"
         },
         {
-            "analyzers.lib/version": "1.3.0"
+            "analyzers.lib/version": "1.4.0"
         },
         {
             "basics.lib/bypass1:author": "Julius Smith"
@@ -45,10 +45,10 @@
             "basics.lib/peakholder:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
         },
         {
-            "basics.lib/peakholder:license": "MIT-style STK-4.3 license"
+            "basics.lib/peakholder:license": "LicenseRef-STK-4.3"
         },
         {
-            "basics.lib/version": "1.22.0"
+            "basics.lib/version": "1.23.0"
         },
         {
             "compile_options": "-lang wasm-i -fpga-mem-th 4 -ct 1 -es 1 -mcd 16 -mdd 1024 -mdy 33 -single -ftz 2"
@@ -57,25 +57,25 @@
             "compressors.lib/FFcompressor_N_chan:author": "Bart Brouns"
         },
         {
-            "compressors.lib/FFcompressor_N_chan:license": "GPLv3"
+            "compressors.lib/FFcompressor_N_chan:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:author": "Bart Brouns"
         },
         {
-            "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:license": "GPLv3"
+            "compressors.lib/RMS_FBcompressor_peak_limiter_N_chan:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/RMS_compression_gain_N_chan_db:author": "Bart Brouns"
         },
         {
-            "compressors.lib/RMS_compression_gain_N_chan_db:license": "GPLv3"
+            "compressors.lib/RMS_compression_gain_N_chan_db:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/RMS_compression_gain_mono_db:author": "Bart Brouns"
         },
         {
-            "compressors.lib/RMS_compression_gain_mono_db:license": "GPLv3"
+            "compressors.lib/RMS_compression_gain_mono_db:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/limiter_lad_N:author": "Dario Sanfilippo"
@@ -84,7 +84,7 @@
             "compressors.lib/limiter_lad_N:copyright": "Copyright (C) 2020 Dario Sanfilippo       <sanfilippo.dario@gmail.com>"
         },
         {
-            "compressors.lib/limiter_lad_N:license": "GPLv3 license"
+            "compressors.lib/limiter_lad_N:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/limiter_lad_stereo:author": "Dario Sanfilippo"
@@ -93,7 +93,7 @@
             "compressors.lib/limiter_lad_stereo:copyright": "Copyright (C) 2020 Dario Sanfilippo       <sanfilippo.dario@gmail.com>"
         },
         {
-            "compressors.lib/limiter_lad_stereo:license": "GPLv3 license"
+            "compressors.lib/limiter_lad_stereo:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/name": "Faust Compressor Effect Library"
@@ -102,13 +102,13 @@
             "compressors.lib/peak_compression_gain_N_chan_db:author": "Bart Brouns"
         },
         {
-            "compressors.lib/peak_compression_gain_N_chan_db:license": "GPLv3"
+            "compressors.lib/peak_compression_gain_N_chan_db:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/peak_compression_gain_mono_db:author": "Bart Brouns"
         },
         {
-            "compressors.lib/peak_compression_gain_mono_db:license": "GPLv3"
+            "compressors.lib/peak_compression_gain_mono_db:license": "GPL-3.0-only"
         },
         {
             "compressors.lib/version": "1.6.0"
@@ -123,7 +123,7 @@
             "filters.lib/crossover2LR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
         },
         {
-            "filters.lib/crossover2LR4:license": "MIT-style STK-4.3 license"
+            "filters.lib/crossover2LR4:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/crossover3LR4:author": "Dario Sanfilippo"
@@ -132,7 +132,7 @@
             "filters.lib/crossover3LR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
         },
         {
-            "filters.lib/crossover3LR4:license": "MIT-style STK-4.3 license"
+            "filters.lib/crossover3LR4:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/fir:author": "Julius O. Smith III"
@@ -141,7 +141,7 @@
             "filters.lib/fir:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
-            "filters.lib/fir:license": "MIT-style STK-4.3 license"
+            "filters.lib/fir:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/highpass:author": "Julius O. Smith III"
@@ -150,13 +150,16 @@
             "filters.lib/highpass:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
+            "filters.lib/highpass:license": "LicenseRef-STK-4.3"
+        },
+        {
             "filters.lib/highpassLR4:author": "Dario Sanfilippo"
         },
         {
             "filters.lib/highpassLR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
         },
         {
-            "filters.lib/highpassLR4:license": "MIT-style STK-4.3 license"
+            "filters.lib/highpassLR4:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/iir:author": "Julius O. Smith III"
@@ -165,7 +168,7 @@
             "filters.lib/iir:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
-            "filters.lib/iir:license": "MIT-style STK-4.3 license"
+            "filters.lib/iir:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/integrator:author": "Julius O. Smith III"
@@ -174,13 +177,16 @@
             "filters.lib/integrator:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
-            "filters.lib/integrator:license": "MIT-style STK-4.3 license"
-        },
-        {
-            "filters.lib/lowpass0_highpass1": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
+            "filters.lib/integrator:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/lowpass0_highpass1:author": "Julius O. Smith III"
+        },
+        {
+            "filters.lib/lowpass0_highpass1:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
+        },
+        {
+            "filters.lib/lowpass0_highpass1:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/lowpassLR4:author": "Dario Sanfilippo"
@@ -189,7 +195,7 @@
             "filters.lib/lowpassLR4:copyright": "Copyright (C) 2022 Dario Sanfilippo <sanfilippo.dario@gmail.com>"
         },
         {
-            "filters.lib/lowpassLR4:license": "MIT-style STK-4.3 license"
+            "filters.lib/lowpassLR4:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/name": "Faust Filters Library"
@@ -201,7 +207,7 @@
             "filters.lib/svf:copyright": "Copyright (C) 2020 Oleg Nesterov <oleg@redhat.com>"
         },
         {
-            "filters.lib/svf:license": "MIT-style STK-4.3 license"
+            "filters.lib/svf:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/tf2:author": "Julius O. Smith III"
@@ -210,7 +216,7 @@
             "filters.lib/tf2:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
-            "filters.lib/tf2:license": "MIT-style STK-4.3 license"
+            "filters.lib/tf2:license": "LicenseRef-STK-4.3"
         },
         {
             "filters.lib/tf2s:author": "Julius O. Smith III"
@@ -219,10 +225,10 @@
             "filters.lib/tf2s:copyright": "Copyright (C) 2003-2019 by Julius O. Smith III <jos@ccrma.stanford.edu>"
         },
         {
-            "filters.lib/tf2s:license": "MIT-style STK-4.3 license"
+            "filters.lib/tf2s:license": "LicenseRef-STK-4.3"
         },
         {
-            "filters.lib/version": "1.7.1"
+            "filters.lib/version": "1.9.0"
         },
         {
             "maths.lib/author": "GRAME"
@@ -231,7 +237,7 @@
             "maths.lib/copyright": "GRAME"
         },
         {
-            "maths.lib/license": "LGPL with exception"
+            "maths.lib/license": "LicenseRef-LGPL-2.1-or-later-with-Faust-exception"
         },
         {
             "maths.lib/name": "Faust Math Library"
@@ -252,19 +258,19 @@
             "routes.lib/name": "Faust Signal Routing Library"
         },
         {
-            "routes.lib/version": "1.2.0"
+            "routes.lib/version": "1.4.0"
         },
         {
-            "signals.lib/name": "Faust Signal Routing Library"
+            "signals.lib/name": "Faust Routing Library"
         },
         {
             "signals.lib/onePoleSwitching:author": "Jonatan Liljedahl, revised by Dario Sanfilippo"
         },
         {
-            "signals.lib/onePoleSwitching:licence": "STK-4.3"
+            "signals.lib/onePoleSwitching:licence": "LicenseRef-STK-4.3"
         },
         {
-            "signals.lib/version": "1.6.0"
+            "signals.lib/version": "1.7.0"
         }
     ],
     "ui": [
@@ -278,7 +284,7 @@
                     "varname": "fHslider14",
                     "shortname": "controls_clarity_presence_tilt_db",
                     "address": "/prism-premium-stereo/controls_clarity_presence_tilt_db",
-                    "index": 524660,
+                    "index": 524696,
                     "meta": [
                         {
                             "0": ""
@@ -318,7 +324,7 @@
                     "varname": "fHslider16",
                     "shortname": "controls_lookahead_ms",
                     "address": "/prism-premium-stereo/controls_lookahead_ms",
-                    "index": 1581548,
+                    "index": 1581616,
                     "meta": [
                         {
                             "0": ""
@@ -338,7 +344,7 @@
                     "varname": "fHslider8",
                     "shortname": "controls_low_band_makeup_db",
                     "address": "/prism-premium-stereo/controls_low_band_makeup_db",
-                    "index": 264,
+                    "index": 284,
                     "meta": [
                         {
                             "0": ""
@@ -355,10 +361,10 @@
                 {
                     "type": "hslider",
                     "label": "controls/low_band_ratio_bias",
-                    "varname": "fHslider9",
+                    "varname": "fHslider11",
                     "shortname": "controls_low_band_ratio_bias",
                     "address": "/prism-premium-stereo/controls_low_band_ratio_bias",
-                    "index": 268,
+                    "index": 524612,
                     "meta": [
                         {
                             "0": ""
@@ -375,7 +381,7 @@
                     "varname": "fHslider12",
                     "shortname": "controls_low_band_threshold_offset_db",
                     "address": "/prism-premium-stereo/controls_low_band_threshold_offset_db",
-                    "index": 524588,
+                    "index": 524616,
                     "meta": [
                         {
                             "0": ""
@@ -395,7 +401,7 @@
                     "varname": "fHslider7",
                     "shortname": "controls_low_band_trim_db",
                     "address": "/prism-premium-stereo/controls_low_band_trim_db",
-                    "index": 260,
+                    "index": 280,
                     "meta": [
                         {
                             "0": ""
@@ -415,7 +421,7 @@
                     "varname": "fHslider15",
                     "shortname": "controls_mid_high_threshold_offset_db",
                     "address": "/prism-premium-stereo/controls_mid_high_threshold_offset_db",
-                    "index": 1049008,
+                    "index": 1049004,
                     "meta": [
                         {
                             "0": ""
@@ -435,7 +441,7 @@
                     "varname": "fHslider10",
                     "shortname": "controls_multiband_depth",
                     "address": "/prism-premium-stereo/controls_multiband_depth",
-                    "index": 272,
+                    "index": 524588,
                     "meta": [
                         {
                             "0": ""
@@ -489,7 +495,7 @@
                     "varname": "fHslider13",
                     "shortname": "controls_output_ceiling_db",
                     "address": "/prism-premium-stereo/controls_output_ceiling_db",
-                    "index": 524648,
+                    "index": 524684,
                     "meta": [
                         {
                             "0": ""
@@ -526,7 +532,7 @@
                     "varname": "fHslider17",
                     "shortname": "controls_output_soft_clip_mix",
                     "address": "/prism-premium-stereo/controls_output_soft_clip_mix",
-                    "index": 3162928,
+                    "index": 3163044,
                     "meta": [
                         {
                             "0": ""
@@ -557,10 +563,10 @@
                 {
                     "type": "hslider",
                     "label": "controls/release_ms",
-                    "varname": "fHslider11",
+                    "varname": "fHslider9",
                     "shortname": "controls_release_ms",
                     "address": "/prism-premium-stereo/controls_release_ms",
-                    "index": 280,
+                    "index": 524584,
                     "meta": [
                         {
                             "0": ""
@@ -580,7 +586,7 @@
                     "varname": "fHslider6",
                     "shortname": "controls_tone_low_band_gain_db",
                     "address": "/prism-premium-stereo/controls_tone_low_band_gain_db",
-                    "index": 208,
+                    "index": 212,
                     "meta": [
                         {
                             "0": ""
