@@ -64,6 +64,6 @@
   },
   "dependencies": {
     "@grame/faustwasm": "^0.15.7",
-    "@sentry/browser": "^10.42.0"
+    "@sentry/browser": "^10.74.0"
   }
 }
